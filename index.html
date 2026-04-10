@@ -1,38 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lomo Trace - Your Private Travel Photo Log</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lomo Trace - Your Private Travel Photo Log</title>
+  <meta
+    name="description"
+    content="Lomo Trace is an offline-first private travel photo log app for recording routes, map pins, photos, and memories on your own device."
+  />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --text: #181818;
+      --muted: #5f5f58;
+      --line: #ddd8cd;
+      --card: #ffffff;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+    }
+
+    .hero {
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 24px;
+    }
+
+    .top-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .top-links a,
+    .card a.button {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .top-links a:hover,
+    .card a.button:hover {
+      transform: translateY(-1px);
+      background: #faf9f6;
+    }
+
+    .section {
+      margin-top: 38px;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 52px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer a {
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Lomo Trace</h1>
-        <nav>
-            <ul>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Service</a></li>
-                <li><a href="support.html">Support</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>About Lomo Trace</h2>
-            <p>Lomo Trace is an offline-first private travel photo log application that allows you to capture, organize, and cherish your travel memories without compromising your privacy.</p>
-        </section>
-        <section>
-            <h2>Feature Overview</h2>
-            <ul>
-                <li>Offline access: Use the app anywhere, with or without an internet connection.</li>
-                <li>Privacy-focused: Your photos and data are securely stored and not shared with third parties.</li>
-                <li>User-friendly interface: Easily navigate through your travel memories and themes.</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Lomo Trace. All rights reserved.</p>
+  <main class="wrap">
+    <section class="hero">
+      <div class="brand">LOMO Trace</div>
+      <h1>Your private travel photo log, kept close to you.</h1>
+      <p class="lead">
+        Lomo Trace helps you record routes, places, photos, and memories on a map
+        with an offline-first, privacy-focused design. Your core records stay on
+        your own device.
+      </p>
+
+      <div class="top-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./support.html">Support</a>
+        <a href="./delete-account.html">Delete Account</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Private travel memory, not a public feed</h2>
+      <p>
+        Lomo Trace is designed for personal journaling, not for public posting.
+        It lets you save places, attach photos, and leave notes without turning
+        your memories into a social timeline.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Privacy Policy</h3>
+        <p>
+          Read how Lomo Trace handles location, photos, optional sign-in, and
+          local-first data storage.
+        </p>
+        <a class="button" href="./privacy.html">Open Privacy Policy</a>
+      </article>
+
+      <article class="card">
+        <h3>Terms of Service</h3>
+        <p>
+          Review the terms for using Lomo Trace, including local storage,
+          responsibility, and limitations of liability.
+        </p>
+        <a class="button" href="./terms.html">Open Terms</a>
+      </article>
+
+      <article class="card">
+        <h3>Support</h3>
+        <p>
+          Find help, FAQs, troubleshooting guidance, and contact information for
+          Lomo Trace.
+        </p>
+        <a class="button" href="./support.html">Open Support Page</a>
+      </article>
+
+      <article class="card">
+        <h3>Delete Account</h3>
+        <p>
+          See how to delete your local profile and data directly inside the app.
+        </p>
+        <a class="button" href="./delete-account.html">Open Deletion Guide</a>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>나만의 여행 기록을, 나만의 기기 안에</h2>
+      <p>
+        Lomo Trace는 여행 경로, 장소, 사진, 메모를 지도 위에 기록하는
+        오프라인 중심 프라이빗 포토 로그 앱이다. 핵심 기록은 중앙 서버가 아니라
+        사용자의 기기에 남도록 설계되었다.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>개인정보처리방침</h3>
+        <p>
+          위치 정보, 사진 접근, 선택 로그인, 로컬 저장 방식 등 개인정보 처리 원칙을 확인할 수 있다.
+        </p>
+        <a class="button" href="./privacy.html">개인정보처리방침 보기</a>
+      </article>
+
+      <article class="card">
+        <h3>이용약관</h3>
+        <p>
+          앱 사용 조건, 로컬 저장 구조, 데이터 유실 책임 제한 등 중요한 약관을 확인할 수 있다.
+        </p>
+        <a class="button" href="./terms.html">이용약관 보기</a>
+      </article>
+
+      <article class="card">
+        <h3>고객지원</h3>
+        <p>
+          자주 묻는 질문, 문제 해결 안내, 문의 이메일 등 지원 정보를 볼 수 있다.
+        </p>
+        <a class="button" href="./support.html">지원 페이지 보기</a>
+      </article>
+
+      <article class="card">
+        <h3>계정 및 데이터 삭제</h3>
+        <p>
+          앱 내에서 로컬 프로필과 데이터를 삭제하는 방법을 안내한다.
+        </p>
+        <a class="button" href="./delete-account.html">삭제 안내 보기</a>
+      </article>
+    </section>
+
+    <footer class="footer">
+      Contact:
+      <a href="mailto:jikookimlomo@gmail.com">jikookimlomo@gmail.com</a><br />
+      © 2026 LOMO
     </footer>
+  </main>
 </body>
 </html>
